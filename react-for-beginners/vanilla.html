@@ -7,75 +7,23 @@
   <script src="https://unpkg.com/react@17.0.2/umd/react.production.min.js"></script>
   <script src="https://unpkg.com/react-dom@17.0.2/umd/react-dom.production.min.js"></script>
   <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
-  <script type="text/babel"></script>
   
-  <script>
-    const root = document.getElementById("root");
-    // let counter = 0;
-
-    function countUp(){
-      counter += 1;
-      reRnder();
-    }
-
-    function reRnder(){
-      ReactDOM.render(<App />,root);
-    }
-
-    const first = () => {
-      <div>
-        <h3>Total clicks: {counter}</h3>
-        <button onClick={countUp}>Click me</button>  
-      </div>
-    }
+  <script type="text/babel">
 
     function App() {
-      const [counter, setCounter] = React.useState(0); //(2) [0, f]
-      // const counter = data[0];
-      // const modifier = data[1];
+      const [counter, setCounter] = React.useState(0); 
       const onClick = () => {
-        setCounter(counter + 1)
-      }
+        setCounter(counter + 1);
+      };
 
       return(
-    <div>
-      <h3>Total clicks: {counter}</h3>
-      <button onClick={onClick}>Click me</button>
-    </div>
+      <div>
+        <h3>Total clicks: {counter}</h3>
+        <button onClick={onClick}>Click me</button>
+      </div>
       )
-    
-  }
-    reRnder();
-    // ReactDOM.render(Container(),root) 이것은 함수로 만들 때 사용이 가능하다.
-    // 렌더링 이쪽으로 내보내기 한다??
-  </script>
+    }
+    const root = document.getElementById("root");
+    ReactDOM.render(<App />,root);
+</script>
 </html>
-<!-- 
-    //   const Title = (
-    //   <h3
-    //   onMouseEnter={() => console.log("mouse enter")}>
-    //   Hello I'm a title
-    //   </h3>
-    //   )
-     -->
-<!-- 
-    // const Button = () => (
-    //   <button style={{backgroundColor: "tomato",}}
-    //   onClick={() => console.log("I'm clicked")}>
-    //   Click me
-    //   </button>
-    // ) // Button의 함수  function의 () 와 return의 의미가 들어가 있다.
-    
-    // const span = React.createElement("h3",{
-    //   id: "title", onMouseEnter: () => console.log("mouse enter"),
-    // },"Hello I'm span");
-    // const btn = React.createElement("button",{
-    //   onClick:() => console.log("i'm clicked"),
-    //   style: { backgroundColor: "tomato",
-    // }
-    // }, "Click me")
-    // const container = React.createElement("div",null,[Title, Button])
-     -->
-
-
-
