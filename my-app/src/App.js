@@ -7,8 +7,8 @@ function App() {
   return (
     <div>
       <Counter />
-      <h1 className={styles.title}>Welcome back!</h1>
-      <Button text="Continue" />
+      {/* <h1 className={styles.title}>Welcome back!</h1>
+      <Button text="Continue" /> */}
     </div>
   );
 }
