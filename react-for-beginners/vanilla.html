@@ -10,15 +10,14 @@
   
   <script type="text/babel">
 
-    function Btn(props){
-      console.log(props)
+    function Btn({banana}){
       return <button style={{
         backgroundColor: "tomato",
         color:"white",
         padding:"10px 20px",
         border: 0,
         borderRadius:10,
-      }} > {props.banana}</button>
+      }} > {banana}</button>
     }
 
  
