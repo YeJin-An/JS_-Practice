@@ -10,7 +10,8 @@
   
   <script type="text/babel">
 
-    function SaveBtn(){
+    function Btn(props){
+      console.log(props.banana)
       return <button style={{
         backgroundColor: "tomato",
         Color:"white",
@@ -20,25 +21,15 @@
       }} >Save button</button>
     }
 
-    function ConfirmBtn(){
-      return <button
-      style={{
-        backgroundColor: "tomato",
-        Color:"white",
-        padding:"10px 20px",
-        border: 0,
-        borderRadius:10,
-      }}
-      >Confirm </button>
-    }
+ 
 
 
     function App() {
     
       return(
       <div>
-        <SaveBtn />
-        <ConfirmBtn />
+        <Btn banana="Save Changes"/>
+        <Btn banana="Continue"/>
       </div>
       )
     }
