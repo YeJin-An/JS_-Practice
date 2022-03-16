@@ -27,7 +27,8 @@
         </div>)
     }
 
- 
+    const MemorizedBtn = React.memo(Btn)
+    // state가 변한 부분만 출력해주세요??
 
 
     function App() {
@@ -36,11 +37,11 @@
       const changeValue = () => setValue("Revert Changes")
       return(
       <div>
-        <Btn 
+        <MemorizedBtn 
         text={value} 
         changeValue = {changeValue}
         />
-        <Btn text="Continue" />
+        <MemorizedBtn text="Continue" />
       </div>
       )
     }
