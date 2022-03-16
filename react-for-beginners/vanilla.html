@@ -10,17 +10,21 @@
   
   <script type="text/babel">
 
-    function Btn({banana, big}){
+    function Btn({text, changeValue}){
 
-  
-      return <button style={{
-        backgroundColor: "tomato",
-        color:"white",
-        padding:"8px 16px",
-        border: 0,
-        borderRadius:10,
-        fontSize: big ? 14 : 12,
-      }} > {banana}</button>
+      console.log(text, "was rendered")
+      return (
+        <div>
+          <button 
+          onClick = {changeValue}
+          style={{
+          backgroundColor: "tomato",
+          color:"white",
+          padding:"8px 16px",
+          border: 0,
+          borderRadius:10,
+        }} > {text}</button>
+        </div>)
     }
 
  
@@ -28,10 +32,15 @@
 
     function App() {
     
+      const [value, setValue] = React.useState("Save Changes")
+      const changeValue = () => setValue("Revert Changes")
       return(
       <div>
-        <Btn banana="Save Changes" big={true} />
-        <Btn banana="Continue" big={false} />
+        <Btn 
+        text={value} 
+        changeValue = {changeValue}
+        />
+        <Btn text="Continue" />
       </div>
       )
     }
