@@ -1,4 +1,5 @@
 import Button from "./Button";
+import CleanUp from "./CleanUp";
 import styles from "./App.module.css";
 
 import Counter from "./Counter";
@@ -6,7 +7,7 @@ import Counter from "./Counter";
 function App() {
   return (
     <div>
-      <Counter />
+      <CleanUp />
       {/* <h1 className={styles.title}>Welcome back!</h1>
       <Button text="Continue" /> */}
     </div>
