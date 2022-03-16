@@ -15,15 +15,15 @@ function CoinTracker() {
 
   return (
     <div>
-      <h1>The coins! ({coins.length})</h1>
+      <h1>The coins! {loading ? "" : `(${coins.length})`}</h1>
       {loading ? <strong>Loading...</strong> : null}
-      <ul>
+      <select>
         {coins.map((coin) => (
-          <li>
+          <option>
             {coin.name}({coin.symbol}): {coin.quotes.USD.price} USD
-          </li>
+          </option>
         ))}
-      </ul>
+      </select>
     </div>
   );
 }
