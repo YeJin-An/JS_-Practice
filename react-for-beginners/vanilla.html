@@ -11,14 +11,14 @@
   <script type="text/babel">
 
     function Btn(props){
-      console.log(props.banana)
+      console.log(props)
       return <button style={{
         backgroundColor: "tomato",
-        Color:"white",
+        color:"white",
         padding:"10px 20px",
         border: 0,
         borderRadius:10,
-      }} >Save button</button>
+      }} > {props.banana}</button>
     }
 
  
@@ -28,8 +28,8 @@
     
       return(
       <div>
-        <Btn banana="Save Changes"/>
-        <Btn banana="Continue"/>
+        <Btn banana="Save Changes" x={false} />
+        <Btn banana="Continue" y={7}/>
       </div>
       )
     }
