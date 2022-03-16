@@ -16,7 +16,7 @@ function ToDoList() {
     setToDos((currentArray) => [ToDo, ...currentArray]);
     setToDo("");
   };
-  console.log(ToDos);
+  // console.log(ToDos);
   return (
     <div>
       <h1>My To Dos {ToDos.length}</h1>
@@ -29,6 +29,12 @@ function ToDoList() {
         />
         <button onClick={onSubmit}>Add To Do</button>
       </form>
+      <hr />
+      <ul>
+        {ToDos.map((item, index) => (
+          <li key={index}>{item}</li>
+        ))}
+      </ul>
     </div>
   );
 }
