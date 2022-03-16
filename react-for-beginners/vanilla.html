@@ -9,86 +9,40 @@
   <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
   
   <script type="text/babel">
-    function MinutesToHours(){
-      const [amount, setAmount] = React.useState()
-      const [inverted, setInverted] = React.useState(false);
 
-      const onChange = (event) => {
-        setAmount(event.target.value)
-      }
-      
-     const reset = () => {
-       setAmount(0)
-     }
-
-     const onInvert = () => {
-      reset();
-      setInverted((current)=> !current);
-     }
-
-
-      return(
-      <div>
-  
-        <label htmlFor="minutes">amount</label>
-        <input 
-        value={inverted ? amount*60 : amount}
-        id="amount" 
-        placeholder="Amount" 
-        type="number"
-        onChange={onChange}
-        disabled = {inverted}
-        // disabled = {flipped === true}
-        />
-
-        <label htmlFor="Hours">Hours</label>
-
-        <input 
-        value={inverted ? amount : Math.round(amount/60)}
-        id="Hours" 
-        placeholder="Hours" 
-        type="number"
-        disabled = {!inverted}
-        // disabled = {inverted == false}
-        onChange = {onChange}
-        />
-        <button onClick={reset}>Reset</button>
-        <button onClick={onInvert}>{inverted ? "Turn back" : "Invert"}</button>
-      </div>
-     
-      )
+    function SaveBtn(){
+      return <button style={{
+        backgroundColor: "tomato",
+        Color:"white",
+        padding:"10px 20px",
+        border: 0,
+        borderRadius:10,
+      }} >Save button</button>
     }
-    
-    function KmToMiles(){
-      return(
-        <h3>KM 2 Ms</h3>
-      )
+
+    function ConfirmBtn(){
+      return <button
+      style={{
+        backgroundColor: "tomato",
+        Color:"white",
+        padding:"10px 20px",
+        border: 0,
+        borderRadius:10,
+      }}
+      >Confirm </button>
     }
-    
+
+
     function App() {
-      const [index, setIndex] = React.useState("xx")
-
-      const oneSelect = (event) => {
-        setIndex(event.target.value);
-      }
-      console.log('render w/',index)
+    
       return(
       <div>
-        
-        <h2 style={{color:"hotpink"}}>Super Converiter</h2>
-        <select onChange={oneSelect}> 
-          <option value="xx">Select your units</option>
-          <option value = "0">Minutes & Hours</option>
-          <option value = "1">Km & Miles</option>
-        </select>
-        <hr />
-        {index === "xx" ? "Please select your unit": null}
-        {index === "0" ? <MinutesToHours/> : null}
-        {index === "1" ? <KmToMiles /> : null}
+        <SaveBtn />
+        <ConfirmBtn />
       </div>
-     
       )
     }
+    
     const root = document.getElementById("root");
     ReactDOM.render(<App />,root);
 </script>
