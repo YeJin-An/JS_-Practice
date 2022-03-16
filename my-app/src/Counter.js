@@ -1,11 +1,21 @@
-import { useState } from "react";
-import Button from "./Button";
+import { useState, useEffect } from "react";
+// effect "우리가 딱 한번만 실행하고 싶은 코드"
 
 function Counter() {
   const [counter, setValue] = useState(0);
 
   const onClick = () => setValue((prev) => prev + 1);
-  console.log("call an api");
+  console.log("I run all the time");
+
+  const iRunOnlyOnce = () => {
+    console.log("I run only once");
+  };
+
+  useEffect(iRunOnlyOnce, []);
+
+  useEffect(() => {
+    console.log("CALL THE API");
+  }, []);
 
   return (
     <div>
