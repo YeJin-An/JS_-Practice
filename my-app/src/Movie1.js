@@ -7,6 +7,7 @@ function Movie1({ id, coverImg, title, summary, genres }) {
       <img src={coverImg} alt={title} />
       <h2>
         <Link to={`/movie/${id}`}>{title}</Link>
+        {/* 이전에는 하이퍼링크 a태그 였다. */}
       </h2>
       <p>{summary}</p>
       <ul>
