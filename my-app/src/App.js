@@ -2,12 +2,16 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 // BrowserRouter VS HashRouter
 import Detail from "./routes/Detail";
 import Home from "./routes/Home";
+import Hello from "./routes/Hello";
 
 function App() {
   return (
     <Router>
       <Switch>
-        <Route path="/movie">
+        <Route path="/hello">
+          <Hello />
+        </Route>
+        <Route path="/movie/:id">
           <Detail />
         </Route>
         <Route path="/">
