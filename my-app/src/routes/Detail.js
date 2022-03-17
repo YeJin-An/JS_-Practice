@@ -29,12 +29,12 @@ function Detail() {
         <h1>Loading...</h1>
       ) : (
         <div>
-          <h1>
-            Detail {movie.id}
-            <a href={movie.url}> link!!</a>
-          </h1>
+          <h1>Detail {movie.id}</h1>
 
           <h3>{movie.title_long}</h3>
+
+          <a href={movie.url}> link!!</a>
+
           <img src={movie.medium_cover_image} />
           <p>{movie.description_intro}</p>
           <h2>rating : {movie.rating}</h2>
