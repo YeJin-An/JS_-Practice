@@ -12,6 +12,7 @@ function App() {
           <Hello />
         </Route>
         <Route path="/movie/:id">
+          {/* id라는 부분은 내가 받게 될 변수의 이름이다 */}
           <Detail />
         </Route>
         <Route path="/">
