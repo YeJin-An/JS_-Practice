@@ -1,5 +1,4 @@
 import React from "react";
-import PropTypes from "prop-types";
 import axios from "axios";
 
 class App extends React.Component {
@@ -15,8 +14,10 @@ class App extends React.Component {
       // moview.data.data.movies 를 이렇게 표현 가능!
     } = await axios.get("https://yts.mx/api/v2/list_movies.json");
 
-    this.setState({ movies: movies });
+    this.setState({ movies, isLoading: false });
     // state의 moview , axios의 movies를 의미 한다.
+
+    console.log(movies);
   };
   componentDidMount() {
     this.getMoviews();
