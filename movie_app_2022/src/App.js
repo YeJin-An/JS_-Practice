@@ -8,7 +8,10 @@ function App() {
   return (
     <div>
       <h1>JS-Pracive</h1>
-      <Food name="Kimchi" fav={true} papapapa={["hello", 1, 2, 3, 4, true]} />
+      <Food name="Kimchi" />
+      <Food name="ramen" />
+      <Food name="samgiopsal" />
+      <Food name="chukumi" />
     </div>
   );
 }
