@@ -1,7 +1,7 @@
 import React from "react";
 import axios from "axios";
 
-class App extends React.Component {
+class ytsApi extends React.Component {
   state = {
     isLoading: true,
     moviee: [],
@@ -30,4 +30,4 @@ class App extends React.Component {
 
 // javascript에서 data가져오는 요것이 fetch 이에여!
 
-export default App;
+export default ytsApi;

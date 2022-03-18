@@ -6,3 +6,5 @@ class Movie extends React.Component {
     return <h1>Hello Movie</h1>;
   }
 }
+
+export default Movie;
