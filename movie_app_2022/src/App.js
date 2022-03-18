@@ -2,6 +2,11 @@ import React from "react";
 import PropTyes from "prop-types";
 
 class App extends React.Component {
+  constructor(props) {
+    super(props);
+    console.log();
+  }
+
   state = {
     count: 0,
   };
@@ -11,7 +16,17 @@ class App extends React.Component {
   minus = () => {
     this.setState((current) => ({ count: current.count - 1 }));
   };
+  componentDidMount() {
+    console.log("component renderd");
+  }
+  componentDidUpdate() {
+    console.log("I'm just updated");
+  }
+  cpmonentWillUnmount() {
+    console.log("Goodbye lifeSytle");
+  }
   render() {
+    // console.log("i'm rendering");
     //render method
     return (
       <div>
@@ -22,5 +37,7 @@ class App extends React.Component {
     );
   }
 }
+
+// constructor 는 JS의 class만들 때 호출하는 것이다.
 
 export default App;
