@@ -3,13 +3,11 @@ import PropTypes from "prop-types";
 
 function Movie({ id, year, title, summary, poster }) {
   return (
-    <div>
-      <h3>
-        {title} {year}
-      </h3>
-
-      <p>{summary}</p>
-      <p>{poster}</p>
+    <div className="movie">
+      <h3 className="movie__title">{title}</h3>
+      <h5 className="movie__year">{year}</h5>
+      <p className="movie__summary">{summary}</p>
+      <p className="movie__poster">{poster}</p>
     </div>
   );
 }
