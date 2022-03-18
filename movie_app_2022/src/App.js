@@ -1,9 +1,9 @@
 import React from "react";
-import Movie from "./Movie";
+import YtsApi from "./YtsApi";
 
 class App extends React.Component {
   render() {
-    return <Movie />;
+    return <YtsApi />;
   }
 }
 

@@ -1,10 +1,10 @@
 import React from "react";
 import axios from "axios";
 
-class ytsApi extends React.Component {
+class YtsApi extends React.Component {
   state = {
     isLoading: true,
-    moviee: [],
+    movie: [],
   };
   getMoviews = async () => {
     const {
@@ -23,11 +23,26 @@ class ytsApi extends React.Component {
     this.getMoviews();
   }
   render() {
-    const { isLoading } = this.state;
-    return <div>{isLoading ? "Loading..." : "We are ready"}</div>;
+    const { isLoading, movies } = this.state;
+    return (
+      <div>
+        {isLoading
+          ? "Loading..."
+          : movies.map((movie) => {
+              console.log(movie);
+              return (
+                <div>
+                  <h3>{movie.title}</h3>
+                  <p>{movie.summary}</p>
+                  <p>{movie.poster}</p>
+                </div>
+              );
+            })}
+      </div>
+    );
   }
 }
 
 // javascript에서 data가져오는 요것이 fetch 이에여!
 
-export default ytsApi;
+export default YtsApi;
