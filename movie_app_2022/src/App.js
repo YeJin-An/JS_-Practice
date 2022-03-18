@@ -9,7 +9,7 @@ class App extends React.Component {
   componentDidMount() {
     setTimeout(() => {
       this.setState({ isLoading: false, book: true });
-    }, 6000);
+    }, 4000);
   }
   render() {
     const { isLoading } = this.state;
