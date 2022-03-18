@@ -1,5 +1,6 @@
 import React from "react";
 import axios from "axios";
+import Movie from "./Movie";
 
 class YtsApi extends React.Component {
   state = {
@@ -12,7 +13,9 @@ class YtsApi extends React.Component {
         data: { movies },
       },
       // moview.data.data.movies 를 이렇게 표현 가능!
-    } = await axios.get("https://yts.mx/api/v2/list_movies.json");
+    } = await axios.get(
+      "https://yts.mx/api/v2/list_movies.json?sort_by=rating"
+    );
 
     this.setState({ movies, isLoading: false });
     // state의 moview , axios의 movies를 의미 한다.
@@ -29,13 +32,15 @@ class YtsApi extends React.Component {
         {isLoading
           ? "Loading..."
           : movies.map((movie) => {
-              console.log(movie);
               return (
-                <div>
-                  <h3>{movie.title}</h3>
-                  <p>{movie.summary}</p>
-                  <p>{movie.poster}</p>
-                </div>
+                <Movie
+                  key={movie.id}
+                  id={movie.id}
+                  year={movie.year}
+                  title={movie.title}
+                  summary={movie.summary}
+                  poster={movie.medium_cover_image}
+                />
               );
             })}
       </div>
