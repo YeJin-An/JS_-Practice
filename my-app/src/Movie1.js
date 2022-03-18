@@ -9,7 +9,7 @@ function Movie1({ id, coverImg, title, summary, genres }) {
         <Link to={`/movie/${id}`}>{title}</Link>
         {/* 이전에는 하이퍼링크 a태그 였다. */}
       </h2>
-      <p>{summary}</p>
+      <p>{summary.length > 235 ? `${summary.slice(0, 225)}...` : summary}</p>
       <ul>
         {genres.map((g) => (
           <li key={g}>{g}</li>
