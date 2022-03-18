@@ -7,8 +7,11 @@ class App extends React.Component {
     isLoading: true,
     moviee: [],
   };
+  getMoviews = async () => {
+    const movies = await axios.get("https://yts.mx/api/v2/list_movies.json");
+  };
   componentDidMount() {
-    const axios.get("https://yts.mx/api/v2/list_movies.json");
+    this.getMoviews();
   }
   render() {
     const { isLoading } = this.state;
