@@ -8,7 +8,15 @@ class App extends React.Component {
     moviee: [],
   };
   getMoviews = async () => {
-    const movies = await axios.get("https://yts.mx/api/v2/list_movies.json");
+    const {
+      data: {
+        data: { movies },
+      },
+      // moview.data.data.movies 를 이렇게 표현 가능!
+    } = await axios.get("https://yts.mx/api/v2/list_movies.json");
+
+    this.setState({ movies: movies });
+    // state의 moview , axios의 movies를 의미 한다.
   };
   componentDidMount() {
     this.getMoviews();
