@@ -6,4 +6,5 @@ from carbon.models import Carbon
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('carbon/', include('carbon.urls')),
+    path('accounts/',include('accounts.urls')),
 ]

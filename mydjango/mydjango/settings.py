@@ -20,6 +20,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'carbon',
+    'accounts',
 
     "rest_framework"
 ]
