@@ -5,8 +5,14 @@
 > react란 JavaScript라이브러리를 활용하여
 > 웹 페이지를 제작하였습니다.
 
-![JS][logo]
-[logo]:C:\Users\user\OneDrive\Documents\JS\_-Practice\my-app\image "To go logo"
+![png](./image/main_Page.png)
 
-- 도움 받은 링크 : <https://nomadcoders.co/dashboard>
-- npm start
+- 해당 메인 페이지 버전
+
+![png](./image/Detail_Page.png)
+
+- 해당 디테일 페이지 버전
+
+도움 받은 링크 : <https://nomadcoders.co/dashboard>
+<br>
+npm start
